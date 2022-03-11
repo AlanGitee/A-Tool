@@ -11,12 +11,12 @@ print('下方显示抽选历史记录：')
 shuchu = random.choice(beilv)
 wenzi = '倍\n你希望继续嘛？'
 shuchuwenzi = str(shuchu)
-gui.msgbox("欢迎使用智控华福简易倍率抽选助手 GUI For 906""\n此程序提供简易倍率抽选功能\n可选倍率1-10.",'软件介绍',ok_button='开始抽选')
+gui.msgbox("欢迎使用简易倍率抽选助手 GUI For 906""\n此程序提供简易倍率抽选功能\n可选倍率1-10.",'软件介绍',ok_button='开始抽选')
 while True:
     shuchu = random.choice(beilv)
     shuchuwenzi = str(shuchu)
     print(shuchuwenzi+'倍')
-    if gui.ccbox(shuchuwenzi+wenzi,'智控华福简易倍率抽选助手 GUI For 906',choices = ('重新抽选','退出')):
+    if gui.ccbox(shuchuwenzi+wenzi,'简易倍率抽选助手 GUI For 906',choices = ('重新抽选','退出')):
         pass   
         
     else:
