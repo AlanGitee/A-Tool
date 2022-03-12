@@ -46,7 +46,7 @@ def chouxuan(username='临时用户'):
                 pass            
             else:
                 break
-xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选', image='lty.gif')
+xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件','退出'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选', image='lty.gif')
 if xuanze == '登录软件':
     yonghushurumima = gui.multpasswordbox(msg='请输入用户名与密码',title='登录软件',fields=('用户名：','密码：'))
     if yonghushurumima == mima:
@@ -70,6 +70,7 @@ elif xuanze == 'lty.gif':
     miaozhong = str(dt.second)
     print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户登录成功')   
     chouxuan('高级用户')
-
+elif xuanze == '退出':
+    sys.exit
 
 
