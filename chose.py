@@ -4,7 +4,7 @@ import sys
 import easygui as gui
 from datetime import datetime
 dt = datetime.today()
-banben = 'V3.1'
+banben = 'V4.0X66ccffX102204255X39c5bbX57197187'
 mima = ['zt','zt']
 print('欢迎使用此程序')
 print('软件版本'+banben)
