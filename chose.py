@@ -31,10 +31,22 @@ def chouxuan(username='临时用户'):
             print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'VIP用户曾甜抽中了'+shuchuwenzi+'倍')   
             if gui.ccbox(shuchuwenzi+wenzi,('抽选助手 GUI For '+username),choices = ('重新抽选','退出')):
                 pass
-                
             else:
                 break
-xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选')
+    elif username == '高级用户':
+        while True:
+            dt = datetime.today()
+            shuchu = random.choice(beilv)
+            shuchuwenzi = str(shuchu)
+            xiaoshi = str(dt.hour)
+            fenzhong = str(dt.minute)
+            miaozhong = str(dt.second)
+            print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户抽中了'+shuchuwenzi+'倍')   
+            if gui.ccbox(shuchuwenzi+wenzi,('抽选助手 GUI For '+username),choices = ('重新抽选','退出')):
+                pass            
+            else:
+                break
+xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选', image='lty.gif')
 if xuanze == '登录软件':
     yonghushurumima = gui.multpasswordbox(msg='请输入用户名与密码',title='登录软件',fields=('用户名：','密码：'))
     if yonghushurumima == mima:
@@ -51,4 +63,13 @@ elif xuanze == '以游客身份使用':
     chouxuan()
 elif xuanze == '关于软件':
     gui.msgbox('此软件是谢思远于华中师大一附中福星学校九年级时开发的\n主要功能是从1到10以及超级加倍中随机抽取一个\n软件开源地址github.com/AlanGitee/A-Tool','关于软件',ok_button='退出')
+elif xuanze == 'lty.gif':
+    dt = datetime.today()
+    xiaoshi = str(dt.hour)
+    fenzhong = str(dt.minute)
+    miaozhong = str(dt.second)
+    print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户登录成功')   
+    chouxuan('高级用户')
+
+
 
