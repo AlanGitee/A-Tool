@@ -6,4 +6,6 @@
 我们的英语老师上课很有趣，所以课上有一个加分制度。
 每节课分数最低的小组要抄单词和短语，为了给那些成绩不好的组较好的游戏体验，加分时会抽一个倍数。
 所以本程序主要作用是提供一个1-10的随机数并用图形化界面显示出来。
-蓝奏云下载https://wwa.lanzouw.com/iUXL401c7t4j
+蓝奏云下载https://wwa.lanzouw.com/iDWZC01e90ej（安装程序）
+https://wwa.lanzouw.com/igzza01e90id（绿色版）
+https://wwa.lanzouw.com/iPB3401e94dc（代码）
