@@ -4,11 +4,15 @@ import sys
 import easygui as gui
 from datetime import datetime
 dt = datetime.today()
-banben = 'V4.0X66ccffX102204255X39c5bbX57197187'
+banben = 'V5.5 Beta X66ccffX102204255X39c5bbX57197187'
 mima = ['zt','zt']
 print('欢迎使用此程序')
 print('软件版本'+banben)
 print('下方显示软件运行记录：')
+xiaoshi = str(dt.hour)
+fenzhong = str(dt.minute)
+miaozhong = str(dt.second)
+print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'软件启动')   
 def chouxuan(username='临时用户'):    
     gui.msgbox(("欢迎使用抽选助手\n此程序由谢思远授权给\n"+username),'抽选助手',ok_button='开始抽选')
     beilv = [1,2,3,4,5,6,7,8,9,10,'超级加']
@@ -33,7 +37,7 @@ def chouxuan(username='临时用户'):
                 pass
             else:
                 break
-    elif username == '高级用户':
+    elif username == '#66CCFF':
         while True:
             dt = datetime.today()
             shuchu = random.choice(beilv)
@@ -41,12 +45,13 @@ def chouxuan(username='临时用户'):
             xiaoshi = str(dt.hour)
             fenzhong = str(dt.minute)
             miaozhong = str(dt.second)
-            print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户抽中了'+shuchuwenzi+'倍')   
+            weimiao = str(dt.microsecond)
+            print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+weimiao+'微秒''SVIP用户#66CCFF抽中了'+shuchuwenzi+'倍')   
             if gui.ccbox(shuchuwenzi+wenzi,('抽选助手 GUI For '+username),choices = ('重新抽选','退出')):
                 pass            
             else:
                 break
-xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件','退出'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选', image='lty.gif')
+xuanze  = gui.buttonbox(choices=('登录软件','以游客身份使用','关于软件','退出'),title='功能选择',msg='请选择功能\n未登录状态下仅可抽选一次\n登录账号可连续抽选\n点击图片有彩蛋', image='lty.gif')
 if xuanze == '登录软件':
     yonghushurumima = gui.multpasswordbox(msg='请输入用户名与密码',title='登录软件',fields=('用户名：','密码：'))
     if yonghushurumima == mima:
@@ -56,6 +61,9 @@ if xuanze == '登录软件':
         miaozhong = str(dt.second)
         print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'VIP用户曾甜登录成功')   
         chouxuan('曾甜')
+    elif yonghushurumima == ['test','test']:
+        gui.msgbox('出老千功能开发中',title='功能待开发',ok_button='知道了')
+
     else:
         gui.msgbox('用户名或密码错误','错误信息',ok_button='退出')
         sys.exit
@@ -68,8 +76,8 @@ elif xuanze == 'lty.gif':
     xiaoshi = str(dt.hour)
     fenzhong = str(dt.minute)
     miaozhong = str(dt.second)
-    print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户登录成功')   
-    chouxuan('高级用户')
+    print('在'+xiaoshi+'时'+fenzhong+'分'+miaozhong+'秒'+'SVIP用户#66CCFF登录成功')   
+    chouxuan('#66CCFF')
 elif xuanze == '退出':
     sys.exit
 
